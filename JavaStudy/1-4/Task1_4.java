@@ -3,8 +3,8 @@
  *
  * ログイン機能をイメージして処理を書いてみましょう！
  * ・アカウント情報として登録されている情報
- * 　名前：alice
- * 　パスワード：pass
+ * 名前：alice
+ * パスワード：pass
  * 本課題では、すべての定数(合計６種類)を使いつつ、if文の使い方に慣れていきましょう！
  * 問① 〜 問⑤まで回答お願いします！
  *
@@ -12,10 +12,9 @@
 public class Task1_4 {
 
   // 定数（アカウント情報）
-  // ① 登録されている名前とパスワードを定数で定義してください。
-  private static final String name = "alice";
-  private static final String pass = "pass";
-
+  // ① 登録されている名前（USER_NAME）とパスワード（USER_PASSWORD）を定数で定義してください。
+  private static final String USER_NAME = "alice";
+  private static final String USER_PASSWORD = "pass";
 
   // 定数（メッセージ）
   private static final String CONST_MSG_SUCCESS = "ログイン成功です。";
@@ -30,23 +29,35 @@ public class Task1_4 {
   //   ※詳しくはJava2章にて紹介します。
 
   public static void main(String[] args) {
-      // 以下の変数「name（名前）」「pass（パスワード）」を使用して、②〜⑤の条件を満たす処理を記述してください。
-      // 名前とパスワードは画面からの入力値だと想定してみましょう。
-       String name = "alice";
-       String pass = "pass";
-      // ② 名前が「 alice 」、パスワードが「 pass 」であった場合、「 ログイン成功です 」と出力してください。
-      // ③ 名前のみ正しい場合、「 パスワードに誤りがあります。 」と出力してください。
-      // ④ パスワードのみ正しい場合、「 名前に誤りがあります。 」と出力してください。
-      // ⑤ 名前もパスワードも間違っていた場合は、「 入力情報に誤りがあります。 」と出力してください。
-      if (name == "alice" && pass == "pass"){
-         System.out.println(CONST_MSG_SUCCESS);
-      } else if (name == "alice"){
-        System.out.println(CONST_MSG_ERROR_PASS);
-      } else if (pass == "pass"){
-        System.out.println(CONST_MSG_ERROR_NAME);
-      } else if (name != "alice" && pass != "pass"){
-        System.out.println(CONST_MSG_ERROR_INPUT);
-      }
-    }
-  }
+      // 以下の変数「name」「pass」を使用して、②〜⑤の条件を満たす処理を記述してください。
+      // nameとpassはログイン画面からの入力値だと想定してみましょう。
 
+
+       String name = "alice";
+       String pass = "alice123";
+
+
+      // ② 「name」の値が「USER_NAME」と等しく、「 pass 」の値が「USER_PASSWORD」と等しい場合。
+      //      定数を使用して「 ログイン成功です 」と出力してください。
+
+
+      // ③ 「USER_NAME」の値のみ等しい場合。
+     //     定数を使用して「 パスワードに誤りがあります。 」 と出力してください。
+
+
+      // ④ 「USER_PASSWORD」の値のみ等しい場合。
+     //定数を使用して「 名前に誤りがあります。 」と出力してください。
+
+
+      // ⑤ 「USER_RNAME」も「USER_PASSWORD」の値も間違っていた場合。 
+     //定数を使用して「 入力情報に誤りがあります。 」と出力してください。
+      if (name.equals("alice") && pass.equals("pass")){
+       System.out.println(CONST_MSG_SUCCESS);
+     } else if(name.equals("alice")){
+       System.out.println(CONST_MSG_ERROR_PASS);
+     } else if(pass.equals("pass")){
+       System.out.println(CONST_MSG_ERROR_NAME);
+     } else {
+       System.out.println(CONST_MSG_ERROR_INPUT);
+     }
+  } }
