@@ -3,10 +3,10 @@
   padding: 0;
 }
 
-.clearfix::after { 
-  content: '';
-  display: block; 
-  clear: both;
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 .header{
@@ -22,11 +22,11 @@
   float: left;
 }
 
-/* .right{
-  
-}*/
+.right{
+  float: left;
+}
 
-.right-left{
+.right-up{
   float: left;
 }
 
@@ -46,18 +46,18 @@
   width: 100px;
   height: 150px;
   background-color: #ff9e6b;
- float: left; 
+  float: left;
 }
 
 .right4{
   width: 250px;
   height: 100px;
   background-color: #8c2727;
-  float: left;
+  clear: both;
 }
 
 .footer{
   width: 400px;
   height: 100px;
   background-color: #d98d30;
-}
+  }
